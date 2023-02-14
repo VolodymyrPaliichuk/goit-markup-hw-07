@@ -1,0 +1,28 @@
+@media screen and (min-width: 480px) {
+  .container {
+    max-width: 428px;
+  }
+
+  .hero {
+    background-image: var(--grd), url(../images/hero/hero-tablet.jpg);
+  }
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero {
+      background-image: var(--grd), url(../images/hero/hero-tablet-2x.jpg);
+    }
+  }
+
+  .container.container-mini {
+    max-width: 296px;
+  }
+
+  .menu-mob-tell-item {
+    font-size: 36px;
+  }
+  .menu-mob-social {
+    gap: 56px;
+  }
+}

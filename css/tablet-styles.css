@@ -1,0 +1,239 @@
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+  }
+
+  /*-------------------------------------HEADER-------------------------*/
+
+  .header {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .header-container {
+    padding-top: 24px;
+    padding-bottom: 10px;
+  }
+
+  .header-mob-hidden {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+    position: relative;
+  }
+
+  .menu-mob-open {
+    display: none;
+  }
+
+  .header-logo {
+    margin-right: 123px;
+  }
+
+  .header-navigation {
+    display: flex;
+  }
+
+  .header-list {
+    padding: 0px;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    display: flex;
+    gap: 40px;
+  }
+
+  .header-link {
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: var(--main-text-color);
+    transition: color var(--hover-cubic-bezier);
+    position: relative;
+  }
+
+  .Studio::after {
+    content: "";
+    position: absolute;
+    top: 48px;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background-color: #404bbf;
+    border-radius: 2px;
+  }
+
+  .Portfolio::after {
+    content: "";
+    position: absolute;
+    top: 48px;
+    left: 0;
+    width: 66px;
+    height: 4px;
+    background-color: #404bbf;
+    border-radius: 2px;
+  }
+
+  .header-link:is(:hover, :focus) {
+    color: var(--pointer-color);
+    border-radius: 5px;
+  }
+
+  .header-address-list {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  .header-mail {
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.04em;
+    color: var(--secondary-text);
+    font-style: normal;
+    transition: color var(--hover-cubic-bezier);
+  }
+
+  .header-mail:is(:hover, :focus) {
+    color: var(--pointer-color);
+  }
+
+  .header-tell {
+    font-size: 12px;
+    line-height: 1.33;
+    letter-spacing: 0.04em;
+    color: var(--secondary-text);
+    font-style: normal;
+  }
+
+  /*-------------------------------------HERO-------------------------*/
+
+  .hero {
+    padding-top: 112px;
+    padding-bottom: 108px;
+    max-width: 768px;
+    background-image: var(--grd), url(../images/hero/hero-desktop.jpg);
+  }
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero {
+      background-image: var(--grd), url(../images/hero/hero-desktop-2x.jpg);
+    }
+  }
+
+  .hero-title {
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 1.07;
+    letter-spacing: 0.02em;
+    color: var(--main-color);
+    margin: auto;
+    max-width: 496px;
+  }
+
+  .hero-btn-item {
+    margin-top: 40px;
+  }
+
+  /*-------------------------------------MAIN-WORK-------------------------*/
+  .work-list {
+    column-gap: 24px;
+    row-gap: 72px;
+  }
+  .work-item {
+    width: calc((100% - 24px) / 2);
+  }
+
+  .work-title {
+    font-family: "Roboto";
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    color: #2e2f42;
+    text-align: left;
+  }
+
+  .stategy-text {
+    max-width: 320px;
+  }
+
+  .Technologies-text {
+    max-width: 350px;
+  }
+
+  /*-------------------------------------MAIN-TEAM-------------------------*/
+
+  .container.container-mini {
+    max-width: 584px;
+  }
+
+  .main-section-team {
+    padding-bottom: 104px;
+  }
+
+  .team-list {
+    column-gap: 24px;
+    row-gap: 64px;
+  }
+
+  .team-item {
+    width: calc((100% - 48px) / 2);
+  }
+
+  /* ------------------------------------MAIN-CLIENTS--------------------------- */
+
+  .clients-item {
+    width: calc((100% - 72px) / 3);
+  }
+
+  .container.container-tablet {
+    max-width: 584px;
+  }
+
+  /*-------------------------------------FOOTER-------------------------*/
+
+  .container.footer-container {
+    max-width: 584px;
+    align-items: flex-start;
+  }
+
+  .footer-logo {
+    justify-content: flex-start;
+  }
+
+  .footer-text {
+    margin-bottom: 0;
+  }
+
+  .block-logo-social {
+    display: flex;
+    gap: 24px;
+  }
+
+  .footer-social-title {
+    text-align: start;
+  }
+
+  .Subscribe-form {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    margin-top: 72px;
+    width: auto;
+  }
+
+  .subscribe-block {
+    align-items: flex-start;
+    width: auto;
+  }
+
+  .subscribe-input {
+    width: 264px;
+  }
+
+  .button-subscribe {
+    margin-top: auto;
+    margin-left: 24px;
+  }
+}

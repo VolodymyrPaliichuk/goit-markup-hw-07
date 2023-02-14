@@ -1,0 +1,200 @@
+@media screen and (min-width: 1200px) {
+  .container {
+    max-width: 1160px;
+  }
+
+  /* -------------------------------------HEADER------------------------- */
+
+  .header-mob-hidden {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+    position: relative;
+  }
+
+  .header-container {
+    padding-top: 24px;
+    padding-bottom: 28px;
+  }
+
+  .header-logo {
+    margin-right: 76px;
+  }
+
+  .header-address-list {
+    flex-direction: row;
+    gap: 40px;
+  }
+
+  .header-mail {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+  }
+
+  .header-tell {
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+  }
+
+  /*-------------------------------------HERO-------------------------*/
+
+  .hero {
+    padding: 188px;
+    max-width: 1440px;
+    background-image: var(--grd), url(../images/hero/hero-desktop.jpg);
+  }
+
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero {
+      background-image: var(--grd), url(../images/hero/hero-desktop-2x.jpg);
+    }
+  }
+
+  .hero-btn-item {
+    margin-top: 48px;
+  }
+
+  /*-------------------------------------MAIN-WORK-------------------------*/
+
+  .main-section-work {
+    padding-top: 120px;
+  }
+  .work-list {
+    gap: 24px;
+  }
+  .work-item {
+    width: calc((100% - 72px) / 4);
+  }
+  .work-title {
+    font-family: "Roboto";
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+    letter-spacing: 0.02em;
+    color: #2e2f42;
+    text-align: left;
+  }
+  .work-text {
+    font-family: "Roboto";
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.5;
+    letter-spacing: 0.02em;
+    color: #434455;
+    width: 264px;
+  }
+  .work-item::before {
+    display: block;
+    content: "";
+    width: 100%;
+    height: 112px;
+    border-radius: 4px;
+    background-color: var(--main-bgc);
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .icon-antenna::before {
+    background-image: url(../images/antenna.svg);
+  }
+
+  .icon-clock::before {
+    background-image: url(../images/clock.svg);
+  }
+
+  .icon-diagram::before {
+    background-image: url(../images/diagram.svg);
+  }
+
+  .icon-astronaut::before {
+    background-image: url(../images/astronaut.svg);
+  }
+
+  /*-------------------------------------MAIN-DOING-------------------------*/
+
+  .doing-hidden {
+    opacity: 1;
+    visibility: visible;
+    pointer-events: all;
+    position: relative;
+  }
+
+  /*-------------------------------------MAIN-DOING-------------------------*/
+
+  .main-section-doing {
+    padding-bottom: 70px;
+  }
+  .doing-title {
+    font-weight: 700;
+    font-size: 36px;
+    line-height: 1.1;
+    text-align: center;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    color: var(--main-text-color);
+    margin-bottom: 72px;
+  }
+  .doing-list {
+    display: flex;
+    gap: 24px;
+  }
+
+  .doing-item {
+    width: calc((100% - 48px) / 3);
+  }
+
+  /*-------------------------------------MAIN-TEAM-------------------------*/
+
+  .container.container-mini {
+    max-width: 1160px;
+  }
+
+  .main-section-team {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+
+  .team-list {
+    display: flex;
+    gap: 24px;
+  }
+  .team-item {
+    width: calc((100% - 72px) / 4);
+  }
+
+  /* ------------------------------------MAIN-CLIENTS--------------------------- */
+
+  .clients-item {
+    width: calc((100% - 120px) / 6);
+  }
+
+  .container.container-tablet {
+    max-width: 1160px;
+  }
+
+  /*-------------------------------------FOOTER-------------------------*/
+
+  .container.footer-container {
+    max-width: 1160px;
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+  }
+
+  .block-logo-social {
+    gap: 120px;
+  }
+
+  .footer-social-title {
+    text-align: start;
+  }
+
+  .Subscribe-form {
+    margin-top: 0;
+    margin-left: 80px;
+  }
+}
