@@ -219,7 +219,21 @@ img {
   fill: #fff;
 }
 
-.menu-mob-icon {
+.menu-mob-close-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.menu-mob-open {
+  width: 32px;
+  height: 22px;
+  position: relative;
+  display: block;
+  background-color: transparent;
+}
+.menu-mob-open-icon {
   position: absolute;
   top: 50%;
   left: 50%;
