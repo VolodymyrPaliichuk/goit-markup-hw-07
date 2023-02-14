@@ -4,6 +4,7 @@
   }
 
   .hero {
+    max-width: 100%;
     background-image: var(--grd), url(../images/hero/hero-tablet.jpg);
   }
 
@@ -24,5 +25,36 @@
   }
   .menu-mob-social {
     gap: 56px;
+  }
+  .modal {
+    width: 392px;
+    min-height: 586px;
+    padding: 24px;
+  }
+
+  .form-head {
+    font-size: 16px;
+  }
+
+  .form-textarea {
+    height: 120px;
+  }
+
+  .checkbox-text {
+    font-size: 12px;
+  }
+
+  .checkbox-link {
+    font-size: 12px;
+  }
+
+  .checkbox-icon-span {
+    width: 16px;
+    height: 16px;
+  }
+
+  .checkbox-icon {
+    width: 10px;
+    height: 8px;
   }
 }

@@ -246,10 +246,10 @@ img {
   padding-top: 112px;
   padding-bottom: 112px;
   text-align: center;
-  max-width: 100%;
+  max-width: 428px;
   margin-left: auto;
   margin-right: auto;
-  background-image: var(--grd), url(../images/hero/hero-tablet.jpg);
+  background-image: var(--grd), url(../images/hero/hero-mobile.jpg);
   background-repeat: no-repeat;
   background-position: center;
 }
@@ -258,7 +258,7 @@ img {
   (min-resolution: 192dpi),
   (min-resolution: 2dppx) {
   .hero {
-    background-image: var(--grd), url(../images/hero/hero-tablet-2x.jpg);
+    background-image: var(--grd), url(../images/hero/hero-mobile-2x.jpg);
   }
 }
 
@@ -795,8 +795,8 @@ img {
 
 .modal {
   position: absolute;
-  width: 408px;
-  min-height: 576px;
+  width: 315px;
+  min-height: 500px;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
@@ -804,7 +804,7 @@ img {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
-  padding: 24px;
+  padding: 10px;
   transition: transform 400ms linear;
 }
 
@@ -849,10 +849,8 @@ label {
 }
 
 .form-head {
-  font-family: "Roboto";
-
   font-weight: 500;
-  font-size: 16px;
+  font-size: 13px;
   line-height: 1.5;
   text-align: center;
   letter-spacing: 0.02em;
@@ -862,7 +860,6 @@ label {
 }
 
 .form-lable-title {
-  font-family: "Roboto";
   font-weight: 400;
   font-size: 12px;
   line-height: 1.33;
@@ -912,11 +909,10 @@ label {
 
 .form-textarea {
   width: 100%;
-  height: 120px;
+  height: 90px;
   border: 1px solid rgba(33, 33, 33, 0.2);
   border-radius: 4px;
   padding: 8px 16px;
-  font-family: "Roboto";
   font-weight: 450;
   font-size: 12px;
   line-height: 1.33;
@@ -928,7 +924,6 @@ label {
 }
 
 .form-textarea::placeholder {
-  font-family: "Roboto";
   font-weight: 400;
   font-size: 12px;
   line-height: 1.33;
@@ -941,18 +936,16 @@ label {
 }
 
 .checkbox-text {
-  font-family: "Roboto";
   font-weight: 400;
-  font-size: 12px;
+  font-size: 11.5px;
   line-height: 1.33;
   letter-spacing: 0.04em;
   color: #757575;
 }
 
 .checkbox-link {
-  font-family: "Roboto";
   font-weight: 400;
-  font-size: 12px;
+  font-size: 11.5px;
   line-height: 1.33;
   letter-spacing: 0.04em;
   color: var(--pointer-color);
@@ -1026,14 +1019,19 @@ label {
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 16px;
-  height: 16px;
+  width: 13px;
+  height: 13px;
   border: 1.25px solid var(--main-text-color);
   border-radius: 2px;
   margin-right: 8px;
   fill: transparent;
   transition: background-color var(--hover-cubic-bezier),
     fill var(--hover-cubic-bezier), border var(--hover-cubic-bezier);
+}
+
+.checkbox-icon {
+  width: 8px;
+  height: 6px;
 }
 
 .checkbox-input:checked + .checkbox-text .checkbox-icon-span {
