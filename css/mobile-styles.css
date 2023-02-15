@@ -26,6 +26,11 @@
   .menu-mob-social {
     gap: 56px;
   }
+
+  .clients-item {
+    min-width: 190px;
+  }
+
   .modal {
     width: 392px;
     min-height: 586px;

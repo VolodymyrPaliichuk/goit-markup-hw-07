@@ -253,6 +253,7 @@ img {
   background-image: var(--grd), url(../images/hero/hero-mobile.jpg);
   background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
 }
 
 @media (min-device-pixel-ratio: 2),
@@ -368,7 +369,7 @@ img {
   margin-bottom: 72px;
 }
 .team-list {
-  gap: 24px;
+  gap: 72px;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -460,12 +461,12 @@ img {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  column-gap: 24px;
+  column-gap: 16px;
   row-gap: 72px;
 }
 
 .clients-item {
-  width: calc((100% - 48px) / 2);
+  width: calc((100% - 16px) / 2);
   height: 88px;
 }
 .clients-link {

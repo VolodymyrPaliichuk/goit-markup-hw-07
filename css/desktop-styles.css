@@ -62,6 +62,7 @@
 
   .main-section-work {
     padding-top: 120px;
+    padding-bottom: 120px;
   }
   .work-list {
     gap: 24px;
@@ -96,6 +97,7 @@
     background-color: var(--main-bgc);
     background-repeat: no-repeat;
     background-position: center;
+    margin-bottom: 8px;
   }
 
   .icon-antenna::before {
@@ -126,7 +128,7 @@
   /*-------------------------------------MAIN-DOING-------------------------*/
 
   .main-section-doing {
-    padding-bottom: 70px;
+    padding-bottom: 120px;
   }
   .doing-title {
     font-weight: 700;
@@ -170,6 +172,7 @@
 
   .clients-item {
     width: calc((100% - 120px) / 6);
+    min-width: 168px;
   }
 
   .container.container-tablet {

@@ -183,8 +183,13 @@
 
   /* ------------------------------------MAIN-CLIENTS--------------------------- */
 
+  .clients-list {
+    column-gap: 24px;
+  }
+
   .clients-item {
     width: calc((100% - 72px) / 3);
+    min-width: 168px;
   }
 
   .container.container-tablet {
