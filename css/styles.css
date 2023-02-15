@@ -120,6 +120,21 @@ img {
   position: absolute;
 }
 
+.menu-mob-open {
+  width: 32px;
+  height: 22px;
+  position: relative;
+  display: block;
+  background-color: transparent;
+}
+.menu-mob-open-icon {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  stroke: #2e2f42;
+}
+
 /* ------------------------------------MENU-MOB-------------------------------- */
 
 .menu-mob {
@@ -226,20 +241,6 @@ img {
   transform: translate(-50%, -50%);
 }
 
-.menu-mob-open {
-  width: 32px;
-  height: 22px;
-  position: relative;
-  display: block;
-  background-color: transparent;
-}
-.menu-mob-open-icon {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-}
-
 /*-------------------------------------HERO-------------------------*/
 
 .hero {
@@ -279,7 +280,7 @@ img {
   background: var(--btn-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
-  border-color: transparent;
+  border: none;
   font-family: "Roboto";
   font-weight: 500;
   font-size: 16px;
@@ -964,6 +965,7 @@ label {
   background: var(--btn-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+  border: none;
   font-family: "Roboto";
   font-weight: 500;
   font-size: 16px;
