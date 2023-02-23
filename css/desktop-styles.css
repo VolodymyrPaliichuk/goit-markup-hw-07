@@ -200,4 +200,19 @@
     margin-top: 0;
     margin-left: 80px;
   }
+
+  /* ------------------------PORTFOLIO-------------------- */
+
+  .main-section {
+    padding-top: 96px;
+    padding-bottom: 120px;
+  }
+
+  .works-item {
+    width: calc((100% - 48px) / 3);
+  }
+
+  .works-list {
+    row-gap: 48px;
+  }
 }

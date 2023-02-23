@@ -241,4 +241,27 @@
     margin-top: auto;
     margin-left: 24px;
   }
+
+  /* ------------------------PORTFOLIO-------------------- */
+
+  .main-section {
+    padding-top: 64px;
+    padding-bottom: 96px;
+  }
+
+  .btn-list {
+    display: flex;
+    justify-content: center;
+    column-gap: 24px;
+    margin-bottom: 64px;
+  }
+
+  .works-item {
+    width: calc((100% - 24px) / 2);
+  }
+
+  .works-list {
+    column-gap: 24px;
+    row-gap: 72px;
+  }
 }

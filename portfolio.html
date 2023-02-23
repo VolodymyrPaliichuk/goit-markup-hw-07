@@ -10,6 +10,9 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.0.0/modern-normalize.min.css"
     />
     <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="stylesheet" href="./css/mobile-styles.css" />
+    <link rel="stylesheet" href="./css/tablet-styles.css" />
+    <link rel="stylesheet" href="./css/desktop-styles.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -25,21 +28,19 @@
             <span class="logo-web">Web</span
             ><span class="logo-studio">Studio</span>
           </a>
-          <ul class="header-list list">
+          <ul class="header-list header-mob-hidden list">
             <li class="header-item">
-              <a class="header-link link" href="./index.html">Studio</a>
+              <a class="header-link Studio link" href="./index.html">Studio</a>
             </li>
             <li class="header-item">
-              <a class="header-link Portfolio link" href="./portfolio.html"
-                >Portfolio</a
-              >
+              <a class="header-link link" href="./portfolio.html">Portfolio</a>
             </li>
             <li class="header-item">
               <a class="header-link link" href="#">Contacts</a>
             </li>
           </ul>
         </nav>
-        <address class="header-address">
+        <address class="header-address header-mob-hidden">
           <ul class="header-address-list list">
             <li class="header-address-item">
               <a class="header-mail list link" href="mailto:info@devstudio.com"
@@ -53,6 +54,83 @@
             </li>
           </ul>
         </address>
+        <button data-Menu-open type="button" class="menu-mob-open">
+          <svg class="menu-mob-open-icon" width="32px" height="22px">
+            <use href="./images/icons.svg#icon-menu-open"></use>
+          </svg>
+        </button>
+      </div>
+      <div data-Menu class="menu-mob is-hidden">
+        <div>
+          <button data-Menu-close type="button" class="menu-mob-close">
+            <svg class="menu-mob-close-icon" width="8px" height="8px">
+              <use href="./images/icons.svg#icon-close-modal"></use>
+            </svg>
+          </button>
+          <ul class="menu-mob-list list">
+            <li class="menu-mob-item">
+              <a class="menu-mob-link Studio link" href="./index.html"
+                >Studio</a
+              >
+            </li>
+            <li class="menu-mob-item">
+              <a class="menu-mob-link link" href="./portfolio.html"
+                >Portfolio</a
+              >
+            </li>
+            <li class="menu-mob-item">
+              <a class="menu-mob-link link" href="#">Contacts</a>
+            </li>
+          </ul>
+        </div>
+        <div>
+          <address class="menu-mob-address">
+            <ul class="menu-mob-address-list list">
+              <li class="menu-mob-tell-item">
+                <a class="menu-mob-tell-link list link" href="tel:+110001111111"
+                  >+11 (000) 111-11-11</a
+                >
+              </li>
+              <li class="menu-mob-mail-item">
+                <a
+                  class="menu-mob-mail-link list link"
+                  href="mailto:info@devstudio.com"
+                  >info@devstudio.com</a
+                >
+              </li>
+            </ul>
+          </address>
+          <ul class="menu-mob-social list">
+            <li class="menu-mob-social-item">
+              <a href="" class="menu-mob-social-link link"
+                ><svg class="menu-mob-link-icon" width="24px" height="24px">
+                  <use href="./images/icons.svg#icon-instagram"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="menu-mob-social-item">
+              <a href="" class="menu-mob-social-link link"
+                ><svg class="menu-mob-link-icon" width="24px" height="24px">
+                  <use href="./images/icons.svg#icon-twitter"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="menu-mob-social-item">
+              <a href="" class="menu-mob-social-link link"
+                ><svg class="menu-mob-link-icon" width="24px" height="24px">
+                  <use href="./images/icons.svg#icon-facebook"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="menu-mob-social-item">
+              <a href="" class="menu-mob-social-link link"
+                ><svg class="menu-mob-link-icon" width="24px" height="24px">
+                  <use href="./images/icons.svg#icon-linkedin"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
       </div>
     </header>
     <main class="main">
@@ -79,12 +157,36 @@
           <ul class="works-list list">
             <li class="works-item">
               <div class="works-img">
-                <img
-                  src="./images/Project_1.jpg"
-                  alt="Apps pages"
-                  width="360"
-                  height="300"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/Portfolio-img/Project_1.jpg    1x,
+                      ./images/Portfolio-img/Project_1-2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/Portfolio-img/Project_1_tablet.jpg    1x,
+                      ./images/Portfolio-img/Project_1_tablet-2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/Portfolio-img/Project_1_mobile.jpg    1x,
+                      ./images/Portfolio-img/Project_1_mobile-2x.jpg 2x
+                    "
+                    media="(max-width: 768px)"
+                  />
+                  <img
+                    src="./images/Portfolio-img/Project_1.jpg"
+                    alt="Apps pages"
+                    width="360"
+                    height="300"
+                  />
+                </picture>
+
                 <div class="works-hidden-content">
                   <p class="works-hidden-text">
                     14 Stylish and User-Friendly App Design Concepts · Task
@@ -100,12 +202,35 @@
             </li>
             <li class="works-item">
               <div class="works-img">
-                <img
-                  src="./images/Project_2.jpg"
-                  alt="QR-code on a phone"
-                  width="360"
-                  height="300"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/Portfolio-img/Project_2.jpg    1x,
+                      ./images/Portfolio-img/Project_2-2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/Portfolio-img/Project_2_tablet.jpg    1x,
+                      ./images/Portfolio-img/Project_2_tablet-2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/Portfolio-img/Project_2_mobile.jpg    1x,
+                      ./images/Portfolio-img/Project_2_mobile-2x.jpg 2x
+                    "
+                    media="(max-width: 768px)"
+                  />
+                  <img
+                    src="./images/Portfolio-img/Project_2.jpg"
+                    alt="QR-code on a phone"
+                    width="360"
+                    height="300"
+                  />
+                </picture>
                 <div class="works-hidden-content">
                   <p class="works-hidden-text">
                     14 Stylish and User-Friendly App Design Concepts · Task
@@ -121,12 +246,35 @@
             </li>
             <li class="works-item">
               <div class="works-img">
-                <img
-                  src="./images/Project_3.jpg"
-                  alt="phone and laptop"
-                  width="360"
-                  height="300"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/Portfolio-img/Project_3.jpg    1x,
+                      ./images/Portfolio-img/Project_3-2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/Portfolio-img/Project_3_tablet.jpg    1x,
+                      ./images/Portfolio-img/Project_3_tablet-2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/Portfolio-img/Project_3_mobile.jpg    1x,
+                      ./images/Portfolio-img/Project_3_mobile-2x.jpg 2x
+                    "
+                    media="(max-width: 768px)"
+                  />
+                  <img
+                    src="./images/Portfolio-img/Project_3.jpg"
+                    alt="phone and laptop"
+                    width="360"
+                    height="300"
+                  />
+                </picture>
                 <div class="works-hidden-content">
                   <p class="works-hidden-text">
                     14 Stylish and User-Friendly App Design Concepts · Task
@@ -143,12 +291,35 @@
             </li>
             <li class="works-item">
               <div class="works-img">
-                <img
-                  src="./images/Project_4.jpg"
-                  alt="car steering wheel"
-                  width="360"
-                  height="300"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/Portfolio-img/Project_4.jpg    1x,
+                      ./images/Portfolio-img/Project_4-2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/Portfolio-img/Project_4_tablet.jpg    1x,
+                      ./images/Portfolio-img/Project_4_tablet-2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/Portfolio-img/Project_4_mobile.jpg    1x,
+                      ./images/Portfolio-img/Project_4_mobile-2x.jpg 2x
+                    "
+                    media="(max-width: 768px)"
+                  />
+                  <img
+                    src="./images/Portfolio-img/Project_4.jpg"
+                    alt="car steering wheel"
+                    width="360"
+                    height="300"
+                  />
+                </picture>
                 <div class="works-hidden-content">
                   <p class="works-hidden-text">
                     14 Stylish and User-Friendly App Design Concepts · Task
@@ -165,12 +336,35 @@
             </li>
             <li class="works-item">
               <div class="works-img">
-                <img
-                  src="./images/Project_5.jpg"
-                  alt="picture of the moon on the phone"
-                  width="360"
-                  height="300"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/Portfolio-img/Project_5.jpg    1x,
+                      ./images/Portfolio-img/Project_5-2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/Portfolio-img/Project_5_tablet.jpg    1x,
+                      ./images/Portfolio-img/Project_5_tablet-2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/Portfolio-img/Project_5_mobile.jpg    1x,
+                      ./images/Portfolio-img/Project_5_mobile-2x.jpg 2x
+                    "
+                    media="(max-width: 768px)"
+                  />
+                  <img
+                    src="./images/Portfolio-img/Project_5.jpg"
+                    alt="picture of the moon on the phone"
+                    width="360"
+                    height="300"
+                  />
+                </picture>
                 <div class="works-hidden-content">
                   <p class="works-hidden-text">
                     14 Stylish and User-Friendly App Design Concepts · Task
@@ -187,12 +381,35 @@
             </li>
             <li class="works-item">
               <div class="works-img">
-                <img
-                  src="./images/Project_6.jpg"
-                  alt="girl with headphones"
-                  width="360"
-                  height="300"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/Portfolio-img/Project_6.jpg    1x,
+                      ./images/Portfolio-img/Project_6-2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/Portfolio-img/Project_6_tablet.jpg    1x,
+                      ./images/Portfolio-img/Project_6_tablet-2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/Portfolio-img/Project_6_mobile.jpg    1x,
+                      ./images/Portfolio-img/Project_6_mobile-2x.jpg 2x
+                    "
+                    media="(max-width: 768px)"
+                  />
+                  <img
+                    src="./images/Portfolio-img/Project_6.jpg"
+                    alt="girl with headphones"
+                    width="360"
+                    height="300"
+                  />
+                </picture>
                 <div class="works-hidden-content">
                   <p class="works-hidden-text">
                     14 Stylish and User-Friendly App Design Concepts · Task
@@ -209,12 +426,35 @@
             </li>
             <li class="works-item">
               <div class="works-img">
-                <img
-                  src="./images/Project_7.jpg"
-                  alt="descriptions with images of people"
-                  width="360"
-                  height="300"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/Portfolio-img/Project_7.jpg    1x,
+                      ./images/Portfolio-img/Project_7-2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/Portfolio-img/Project_7_tablet.jpg    1x,
+                      ./images/Portfolio-img/Project_7_tablet-2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/Portfolio-img/Project_7_mobile.jpg    1x,
+                      ./images/Portfolio-img/Project_7_mobile-2x.jpg 2x
+                    "
+                    media="(max-width: 768px)"
+                  />
+                  <img
+                    src="./images/Portfolio-img/Project_7.jpg"
+                    alt="descriptions with images of people"
+                    width="360"
+                    height="300"
+                  />
+                </picture>
                 <div class="works-hidden-content">
                   <p class="works-hidden-text">
                     14 Stylish and User-Friendly App Design Concepts · Task
@@ -231,12 +471,35 @@
             </li>
             <li class="works-item">
               <div class="works-img">
-                <img
-                  src="./images/Project_8.jpg"
-                  alt="girl with fruit"
-                  width="360"
-                  height="300"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/Portfolio-img/Project_8.jpg    1x,
+                      ./images/Portfolio-img/Project_8-2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/Portfolio-img/Project_8_tablet.jpg    1x,
+                      ./images/Portfolio-img/Project_8_tablet-2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/Portfolio-img/Project_8_mobile.jpg    1x,
+                      ./images/Portfolio-img/Project_8_mobile-2x.jpg 2x
+                    "
+                    media="(max-width: 768px)"
+                  />
+                  <img
+                    src="./images/Portfolio-img/Project_8.jpg"
+                    alt="girl with fruit"
+                    width="360"
+                    height="300"
+                  />
+                </picture>
                 <div class="works-hidden-content">
                   <p class="works-hidden-text">
                     14 Stylish and User-Friendly App Design Concepts · Task
@@ -253,12 +516,35 @@
             </li>
             <li class="works-item">
               <div class="works-img">
-                <img
-                  src="./images/Project_9.jpg"
-                  alt="cup of coffe"
-                  width="360"
-                  height="300"
-                />
+                <picture>
+                  <source
+                    srcset="
+                      ./images/Portfolio-img/Project_9.jpg    1x,
+                      ./images/Portfolio-img/Project_9-2x.jpg 2x
+                    "
+                    media="(min-width: 1200px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/Portfolio-img/Project_9_tablet.jpg    1x,
+                      ./images/Portfolio-img/Project_9_tablet-2x.jpg 2x
+                    "
+                    media="(min-width: 768px)"
+                  />
+                  <source
+                    srcset="
+                      ./images/Portfolio-img/Project_9_mobile.jpg    1x,
+                      ./images/Portfolio-img/Project_9_mobile-2x.jpg 2x
+                    "
+                    media="(max-width: 768px)"
+                  />
+                  <img
+                    src="./images/Portfolio-img/Project_9.jpg"
+                    alt="cup of coffe"
+                    width="360"
+                    height="300"
+                  />
+                </picture>
                 <div class="works-hidden-content">
                   <p class="works-hidden-text">
                     14 Stylish and User-Friendly App Design Concepts · Task
@@ -279,48 +565,50 @@
     </main>
     <footer class="footer">
       <div class="container footer-container">
-        <div class="block-footer-logo">
-          <a class="footer-logo link" href="./index.html">
-            <span class="logo-web">Web</span
-            ><span class="footer-logo-studio">Studio</span>
-          </a>
-          <p class="footer-text">
-            Increase the flow of customers and sales for your business with
-            digital marketing & growth solutions.
-          </p>
-        </div>
-        <div class="block-footer-social">
-          <h3 class="footer-social-title">Social media</h3>
-          <ul class="footer-content-social list">
-            <li class="footer-item">
-              <a href="" class="footer-social-link link"
-                ><svg class="link-icon" width="24px" height="24px">
-                  <use href="./images/icons.svg#icon-instagram"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="footer-item">
-              <a href="" class="social-link link"
-                ><svg class="footer-link-icon" width="24px" height="24px">
-                  <use href="./images/icons.svg#icon-twitter"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="footer-item">
-              <a href="" class="social-link link"
-                ><svg class="link-icon" width="24px" height="24px">
-                  <use href="./images/icons.svg#icon-facebook"></use>
-                </svg>
-              </a>
-            </li>
-            <li class="footer-item">
-              <a href="" class="social-link link"
-                ><svg class="link-icon" width="24px" height="24px">
-                  <use href="./images/icons.svg#icon-linkedin"></use>
-                </svg>
-              </a>
-            </li>
-          </ul>
+        <div class="block-logo-social">
+          <div class="block-footer-logo">
+            <a class="footer-logo link" href="./index.html">
+              <span class="logo-web">Web</span
+              ><span class="footer-logo-studio">Studio</span>
+            </a>
+            <p class="footer-text">
+              Increase the flow of customers and sales for your business with
+              digital marketing & growth solutions.
+            </p>
+          </div>
+          <div class="block-footer-social">
+            <h3 class="footer-social-title">Social media</h3>
+            <ul class="footer-content-social list">
+              <li class="footer-item">
+                <a href="" class="footer-social-link link"
+                  ><svg class="link-icon" width="24px" height="24px">
+                    <use href="./images/icons.svg#icon-instagram"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer-item">
+                <a href="" class="social-link link"
+                  ><svg class="footer-link-icon" width="24px" height="24px">
+                    <use href="./images/icons.svg#icon-twitter"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer-item">
+                <a href="" class="social-link link"
+                  ><svg class="link-icon" width="24px" height="24px">
+                    <use href="./images/icons.svg#icon-facebook"></use>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer-item">
+                <a href="" class="social-link link"
+                  ><svg class="link-icon" width="24px" height="24px">
+                    <use href="./images/icons.svg#icon-linkedin"></use>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
         <form class="Subscribe-form">
           <div class="subscribe-block">
@@ -343,5 +631,7 @@
         </form>
       </div>
     </footer>
+    <script src="./js/modal.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>
